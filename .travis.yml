@@ -2,5 +2,6 @@ before_install:
 - sudo apt-get install build-essential
 
 install:
+- ./autogen.sh
 - ./configure --enable-fixed-point
 - make
