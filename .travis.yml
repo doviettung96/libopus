@@ -1,5 +1,5 @@
 before_install:
-- apt-get install build-essential
+- sudo apt-get install build-essential
 
 install:
 - ./configure --enable-fixed-point
