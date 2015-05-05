@@ -1,10 +1,6 @@
 before_install:
-- sudo apt-get install build-essential
-- curl -L https://s3.amazonaws.com/mozilla-games/emscripten/releases/emsdk-portable.tar.gz | tar xz
-- emsdk_portable/emsdk update
-- emsdk_portable/emsdk install latest
-- emsdk_portable/emsdk activate latest
+- apt-get install build-essential
 
 install:
-- source emsdk_portable/emsdk_env.sh && emconfigure ./configure --enable-fixed-point
-- source emsdk_portable/emsdk_env.sh && emmake
+- ./configure --enable-fixed-point
+- make
